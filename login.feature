@@ -8,19 +8,20 @@
             Contexto:
             Dado que acesso a página de Login
 
-            Esquema do Cenário: Dados válidos
-            Quando preencho o campo <e-mail>
-            E <senha>
-            Então ocorre o redirecionamento para página de checkout
+            Cenário: Autenticação com dados válidos
+            Quando preencho o campo e-mail com "<e-mail>"
+            E preencho o campo senha com "<senha>"
+            E clico no botão de login
+            Então ocorre o redirecionamento para a página de checkout
 
-            Esquema do Cenário: Dados inválidos
-            Quando preencho o campo email "teste@mailinator.com"
-            E campo senha "123ebac@"
-            Então é exibido mensagem de alerta "Usuário ou senha inválidos."
+            Exemplos:
+            | e-mail                  | senha      |
+            | andressa@mailinator.com | ebac123@   |
+            | brasil@mailinator.com   | brasil145@ |
+            | osvaldo@mailinator.com  | osv123@    |
 
-            Exemplos
-
-            | e-mail                    | senha        |
-            | "andressa@mailinator.com" | "ebac123@"   |
-            | "brasil@mailinator.com"   | "brasil145@" |
-            | "osvaldo@mailinator.com"  | "osv123@"    |
+            Cenário: Autenticação com dados inválidos
+            Quando preencho o campo e-mail com "teste@mailinator.com"
+            E preencho o campo senha com "123ebac@"
+            E clico no botão de login
+            Então é exibida uma mensagem de alerta "Usuário ou senha inválidos!!!"
