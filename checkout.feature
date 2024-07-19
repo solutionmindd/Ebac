@@ -8,13 +8,13 @@
             Contexto:
             Dado que acesso a página de detalhes de faturamento
 
-            Cenário: Campos obrigatórios preenchidos
-            Quando preencho os campos obrigatórios nome, sobrenome, país, endereço, cidade, cep, telefone, e-mail
+            Esquema do Cenário: Campos obrigatórios preenchidos
+            Quando preencho os campos obrigatórios <nome>, <sobrenome>, <pais>, <endereco> , <cidade>, <cep>, <telefone>, <email>
             E clico em finalizar compra
             Então recebo mensagem de sucesso "Pedido realizado com sucesso!"
 
             Exemplos:
-            | nome       | sobrenome   | país       | endereço             | cidade      | cep         | telefone    | e-mail                    |
+            | nome       | sobrenome   | pais       | endereco             | cidade      | cep         | telefone    | email                    |
             | "Andressa" | "Rodrigues" | "Portugal" | "rua: teste123"      | "Lisboa"    | "03800-000" | "4002-8922" | "andressa@mailinator.com" |
             | "Bruno"    | "Neves"     | "Brasil"   | "av: teste123"       | "Campinas"  | "03900-000" | "4001-8922" | "brasil@mailinator.com"   |
             | "Caio"     | "Tagomori"  | "Japão"    | "travessa: teste123" | "Liberdade" | "04000-000" | "4003-8922" | "osvaldo@mailinator.com"  |
